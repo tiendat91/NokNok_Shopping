@@ -1,0 +1,78 @@
+﻿@page
+@model MyRazorPage.Pages.Admin.Product.ImportFileModel
+@{
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+
+<div id="content-right">
+    <div class="path-admin">IMPORT FILE</b></div>
+    <div class="content-main">
+        <div id="content-main-dashboard">
+            <div id="product-title-1" style="width: 30%;">
+
+                <form method="post" enctype="multipart/form-data">
+                    <label>Import .xls or .xlsx file</label><br></br>
+                    <input type="file" name="fileUpload"/><br /><br />
+                    <button type="submit" onclick="return Confirm()">Import into Product</button>
+                </form>
+            </div>
+            <div id="product-title-2" style="width: 70%;">
+                @{
+                    @if (Model.ListImportProduct != null)
+                    {
+                        <div id="order-table-admin">
+                            <table id="orders">
+                                <tr>
+                                    <th>ProductID</th>
+                                    <th>ProductName</th>
+                                    <th>Category</th>
+
+                                    <th>UnitPrice</th>
+                                    <th>Unit</th>
+                                    <th>UnitsInStock</th>
+                                    <th>Discontinued</th>
+                                    <th></th>
+                                </tr>
+                                @foreach (var item in Model.ListImportProduct)
+                                {
+                                    <tr>
+                                        <td>@item.ProductName</td>
+                                        <td>@item.UnitPrice</td>
+                                        <td>@item.UnitsInStock</td>
+                                        <td>@item.CategoryId</td>
+                                        <td>@item.Discontinued</td>
+                                        <td>
+                                            @*                                <a asp-page="./edit"
+                                asp-route-lastPageIndex="@Model.ListImportProduct.PageIndex"
+                                asp-route-proID="@item.ProductId">Edit</a> &nbsp; | &nbsp;
+                                <a asp-page="./delete"
+                                asp-route-lastPageIndex="@Model.ListImportProduct.PageIndex"
+                                asp-route-proID="@item.ProductId">Delete</a>*@
+
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                        <form method="post" asp-page-handler="Import">
+                            
+                            <button type="submit">Import to Products</button>
+                        </form>
+                    }
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function Confirm() {
+        if (confirm("Do you want to import those data excel into database?") == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>

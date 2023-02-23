@@ -1,0 +1,225 @@
+﻿@page
+@model MyRazorPage.Pages.Orders.OrderPDFModel
+@{
+    Layout = "";
+    decimal? subtotal = 0;
+    decimal? tax = 0;
+    decimal? grandtotal = 0;
+}
+<style>
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    body {
+        position: relative;
+        width: 23cm;
+        height: 29.7cm;
+        margin: 0 auto;
+        color: black
+        background: #FFFFFF;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    header {
+        padding: 10px 0;
+        margin-bottom: 30px;
+    }
+
+    #logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+        #logo img {
+            width: 90px;
+        }
+
+    h1 {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        color: black;
+        font-size: 2.4em;
+        line-height: 1.4em;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 0 20px 0;
+        background-image: url('img\dimension.png');
+    }
+
+    #project {
+        float: left;
+    }
+
+        #project span {
+            color: black;
+            text-align: right;
+            width: 52px;
+            margin-right: 10px;
+            display: inline-block;
+            font-size: 0.8em;
+        }
+
+    #company {
+        float: right;
+        text-align: right;
+    }
+
+        #project div,
+        #company div {
+            white-space: nowrap;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 20px;
+    }
+
+        table tr:nth-child(2n-1) td {
+            background: #F5F5F5;
+        }
+
+        table th,
+        table td {
+            text-align: center;
+        }
+
+        table th {
+            padding: 5px 20px;
+            color: black;
+            border-bottom: 1px solid #C1CED9;
+            white-space: nowrap;
+            font-weight: normal;
+        }
+
+        table .service,
+        table .desc {
+            text-align: left;
+        }
+
+        table td {
+            padding: 20px;
+            text-align: right;
+        }
+
+            table td.service,
+            table td.desc {
+                vertical-align: top;
+            }
+
+            table td.unit,
+            table td.qty,
+            table td.total {
+                font-size: 1em;
+            }
+
+            table td.grand {
+                border-top: 1px solid black;
+                ;
+            }
+
+    #notices .notice {
+        color: black;
+        font-size: 1.2em;
+    }
+
+    footer {
+        color: black;
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #C1CED9;
+        padding: 8px 0;
+        text-align: center;
+    }
+</style>
+
+    <header class="clearfix">
+        <div id="logo">
+            <img style="width: 230px" src="~/img/logo.png" />
+        </div>
+        <h1>ORDER RECEIPT</h1>
+        <div id="company" class="clearfix">
+            <div>Company Name</div>
+        <div style="font-weight: bold;">@Model.Order.Customer.CompanyName<br /> @Model.Order.Customer.Address</div>
+            <div>(123) 000-0000</div>
+            <div><a href="#">abc123@gmail.com</a></div>
+        </div>
+        <div id="project">
+        <div><span>CUSTOMER</span> <span style="font-weight:bold; font-size:14px; color:red">@Model.Order.Customer.ContactTitle @Model.Order.Customer.ContactName</span></div>
+        <div><span>ADDRESS</span> @Model.Order.ShipAddress</div>
+            <div><span>EMAIL</span> <a href="#">john@example.Customercom</a></div>
+        <div><span>DATE</span><span style="font-weight:bold; font-size:14px">@Model.Order.OrderDate?.ToString("dd/MM/yyyy")</span> </div>
+        <div><span>REQ-DATE</span><span style="font-weight:bold; font-size:14px">@Model.Order.RequiredDate?.ToString("dd/MM/yyyy")</span></div>
+        <div><span>ORDER-ID</span><span style="font-weight:bold; font-size:14px; color:red">@Model.Order.OrderId</span></div>
+
+    </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="service">PRODUCT NAME</th>
+                    <th class="desc">DESCRIPTION</th>
+                    <th>QUANTITY PER UNIT</th>
+                    <th>UNIT PRICE</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Order.OrderDetails)
+            {
+                <tr>
+                    <td class="service">@item.Product.ProductName</td>
+                    <th ></th>
+                    <td class="qty">@item.Quantity</td>
+                    <td class="unit">@item.Product.UnitPrice</td>
+                    <td class="total">
+                        @{
+                            var price = item.Quantity * item.Product.UnitPrice;
+                            subtotal += price;
+                        }
+                        $ @($"{price}")
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="4">SUBTOTAL</td>
+                <td class="total">$ @subtotal</td>
+            </tr>
+            <tr>
+                <td colspan="4">TAX 8%</td>
+                @{
+                    tax = subtotal / 100 * 8;
+                    grandtotal = subtotal - tax;
+                }
+                <td class="total">$ @tax</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="color:red;font-weight: bold" class="grand total">GRAND TOTAL</td>
+                <td class="grand total">$@grandtotal</td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>NOTICE:</div>
+            <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+        <div class="notice"><a asp-page-handler="SendEmail" asp-route-orderId="@Model.Order.OrderId">SEND TO EMAIL</a></div>
+
+        </div>
+    </main>
+    <footer>
+        Footer
+    </footer>

@@ -1,0 +1,104 @@
+﻿@page
+@model MyRazorPage.Pages.Orders.ListOrdersModel
+@{
+    var oid = "";
+}
+<div id="content">
+    <div id="content-left">
+        <h3 style="font-weight: normal;">Welcome, @Model.Customer.ContactName</h3>
+        <h3>Account Management</h3>
+        <ul>
+            <a href="/account/profile">
+            <li>Personal information</li></a>
+        </ul>
+        <h3>My order</h3>
+        <ul>
+            <a href="/orders/listOrders">
+            <li style="background-color: sienna; color: white">All orders</li></a>
+            <a href="/orders/canceledorder">
+            <li>Canceled order</li></a>
+        </ul>
+    </div>
+    <div id="content-right">
+        <div class="path">LIST ORDERS</b></div>
+        <div class="content-main">
+            <div id="profile-content-order">
+                <div>
+                    @*PENDING LIST*@
+                    @{
+                        if (Model.OrderedList.Count > 0)
+                        {
+                                @foreach (var item in Model.OrderedList)
+                            {
+                                    @if(item.RequiredDate != null){
+                                        <div class="profile-order-title">
+                                            <div class="profile-order-title-left">
+                                                <div>Order creation date: @item.OrderDate</div>
+                                                <div>Order: <a href="/orders/orderpdf?orderId=@item.OrderId">#@item.OrderId</a></div>
+                                            </div>
+                                        <div class="profile-order-title-right">
+                                            <form method="post">
+                                                <input name="email" value="@Model.Customer.Accounts.First().Email" hidden>
+                                                <input name="orderID" value="@item.OrderId" hidden>
+                                                <button type="submit" value="" onclick="SendEmail()">Send Recipt to Email</button>
+                                            </form>
+                                        </div>
+                                             @if (item.ShippedDate == null)
+                                        {
+                                                <div class="profile-order-title-right">
+                                                        <span>
+                                                        Pending | <a asp-page-handler="DeleteOrder" asp-route-orderId="@item.OrderId" onclick="return CheckCancel()">Cancel</a>
+                                                        </span>
+                                                        
+                                                </div>
+                                        }
+                                        else
+                                        {
+                                                <div class="profile-order-title-right">
+                                                    <span style="color: blue;">Completed</span>
+                                                </div>
+                                        }
+                                        
+                                        
+
+                                        </div>
+                                        @foreach (var item2 in item.OrderDetails)
+                                    {
+                                            <div class="profile-order-content">
+                                                <div class="profile-order-content-col1">
+                                                    <a href="detail.html"><img src="~/img/2.jpg" width="100%" /></a>
+                                                </div>
+                                                <div class="profile-order-content-col2">@item2.Product.ProductName</div>
+                                                <div class="profile-order-content-col3">@item2.Quantity</div>
+                                                <div class="profile-order-content-col4">@item2.Product.UnitPrice</div>
+                                            </div>
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                                <div class="profile-order-title-right">
+                                    <span>No Order In Here</span>
+                                </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function CheckCancel() {
+        if (confirm("Do you want to canel this order?") == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function SendEmail() {
+        alert("An email order has been sent to your email. Please check");
+    }
+</script>

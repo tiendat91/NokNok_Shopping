@@ -1,0 +1,68 @@
+﻿@page
+@model MyRazorPage.Pages.Product.EditModel
+@{
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+<div id="content-right">
+    <div class="path-admin">EDIT PRODUCT</b></div>
+    <div class="content-main">
+        <form id="content-main-product" method="post">
+            <div class="content-main-1">
+                <input asp-for="Product.ProductId" type="hidden" />
+
+                <label>Product name (*):</label><br />
+                <input asp-for="Product.ProductName" /><br />
+                <span class="msg-error" asp-validation-for="Product.ProductName"></span><br />
+
+                <label>Unit price:</label><br />
+                <input asp-for="Product.UnitPrice" /><br />
+                <span class="msg-error" asp-validation-for="Product.UnitPrice"></span><br />
+
+                <label>Quantity per unit:</label><br />
+                <input asp-for="Product.QuantityPerUnit" /><br />
+
+                <label>Units in stock (*):</label><br />
+                <input type="text" asp-for="Product.UnitsInStock" /><br />
+                <span class="msg-error" asp-validation-for="Product.UnitsInStock"></span><br />
+            </div>
+            <div class="content-main-1">
+                <label>Category (*):</label><br />
+                <select asp-for="Product.CategoryId">
+                    @foreach (var item in Model.categories)
+                    {
+                        <option value="@item.CategoryId">@item.CategoryName</option>
+                    }
+                </select>
+                <input asp-for="Product.Category" value="@Model.categories" type="hidden" />
+
+                <br />
+                <span class="msg-error" asp-validation-for="Product.CategoryId"></span><br />
+
+                <label>Reorder level:</label><br />
+                <input type="text" asp-for="Product.ReorderLevel" disabled></span><br />
+
+                <label>Units on order:</label><br />
+                <input type="text" asp-for="Product.UnitsOnOrder" disabled></span><br />
+
+                <label>Discontinued:</label><br />
+                @{
+                    @if (Model.Product.Discontinued == false)
+                    {
+                        <input type="checkbox" name="chkDiscontinued">
+
+                        <br />
+                    }
+                    else
+                    {
+                        <input type="checkbox" name="chkDiscontinued" checked>
+
+                        <br />
+                    }
+                }
+
+                <input type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>

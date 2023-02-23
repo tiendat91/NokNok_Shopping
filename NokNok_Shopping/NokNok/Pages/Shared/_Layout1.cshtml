@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="~/index"><img src="~/img/logo.png" /></a>
+            </div>
+            <div id="banner">
+                <ul>
+                    @{
+                        if (!User.Identity.IsAuthenticated)
+                        {
+                            <li><a href="~/account/signin">SignIn</a></li>
+                            <li><a href="~/account/signup">SignUp</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="~/account/profile">Profile</a></li>
+                            <li><a href="~/account/cart">Cart: @Context.Session.GetInt32("CountOrderCart").ToString()</a></li>
+
+                            @if (User.IsInRole("1"))
+                            {
+                                <li><a href="~/admin/dashboard">Dashboard</a></li>
+                            }
+                            <li><a href="~/account/signout">SignOut</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        @RenderBody()
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@page
+@model MyRazorPage.Pages.Admin.OrderDetailModel
+@{
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
+}
+
+<div id="content-right">
+    <div class="path-admin">ORDER DETAIL</b></div>
+    <div class="content-main">
+        <div id="content-main-dashboard">
+            <div>
+
+                    <div class="profile-order-title">
+                        <div class="profile-order-title-left">
+                        <div>Order ID: <a href="/orders/orderpdf?orderId=@Model.order.OrderId">#@Model.order.OrderId</a></div>
+                            <div>Order creation date: @Model.order.OrderDate?.ToString("dd/MM/yyyy")</div>
+                        </div>
+                        @if (Model.order.ShippedDate == null && Model.order.RequiredDate !=null)
+                        {
+                            <div class="profile-order-title-right">
+                                <span>
+                                    Pending 
+                                </span>
+                            </div>
+                        }
+                        @if(Model.order.ShippedDate != null && Model.order.RequiredDate !=null)
+                        {
+                            <div class="profile-order-title-right">
+                                <span style="color: blue;">Completed</span>
+                            </div>
+                        }
+                        @if (Model.order.RequiredDate == null)
+                        {
+                            <div class="profile-order-title-right">
+                                <span>
+                                    Order Canceled
+                                </span>
+                            </div>
+                        }
+                    </div>
+                    @foreach (var item2 in Model.order.OrderDetails)
+                    {
+                        <div class="profile-order-content">
+                            <div class="profile-order-content-col1">
+                                <a href="detail.html"><img src="~/img/2.jpg" width="100%" /></a>
+                            </div>
+                            <div class="profile-order-content-col2">@item2.Product.ProductName</div>
+                            <div class="profile-order-content-col3">@item2.Product.QuantityPerUnit</div>
+                            <div class="profile-order-content-col4">@item2.Product.UnitPrice</div>
+                        </div>
+                    }
+            </div>
+        </div>
+    </div>
+</div>

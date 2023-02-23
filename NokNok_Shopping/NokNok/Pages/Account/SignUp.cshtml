@@ -1,0 +1,47 @@
+﻿@page
+@model MyRazorPage.Pages.Account.SignUpModel
+@{
+}
+<div id="content">
+    <div id="form">
+        <div id="form-title">
+            <span><a href="~/account/signup" style="color: red;">SIGN UP</a></span>
+            <span><a href="~/account/signin">SIGN IN</a></span>
+        </div>
+        <div id="form-content">
+            <div class="msg-error" style="text-align:left">@ViewData["msg"]</div>
+            <form method="post">
+                <input asp-for="Customer.CustomerId" value="1" type="hidden" />
+                <label>Company name<span style="color: red;">*</span></label><br />
+                <input asp-for="Customer.CompanyName" /><br />
+                <span class="msg-error" asp-validation-for="Customer.CompanyName" /><br />
+
+                <label>Contact name<span style="color: red;">*</span></label><br />
+                <input asp-for="Customer.ContactName" /><br />
+                <span class="msg-error" asp-validation-for="Customer.ContactName" /><br />
+
+                <label>Contact title<span style="color: red;">*</span></label><br />
+                <input asp-for="Customer.ContactTitle" /><br />
+                <span class="msg-error" asp-validation-for="Customer.ContactTitle" /><br />
+
+                <label>Address<span style="color: red;">*</span></label><br />
+                <input asp-for="Customer.Address" /><br />
+                <span class="msg-error" asp-validation-for="Customer.Address" /><br />
+
+                <label>Email<span style="color: red;">*</span></label><br />
+                <input asp-for="Account.Email" /><br />
+                <span class="msg-error" asp-validation-for="Account.Email" />
+
+                <label>Password<span style="color: red;">*</span></label><br />
+                <input asp-for="Account.Password" /><br />
+                <span class="msg-error" asp-validation-for="Account.Password" /><br />
+
+                <label>Re-Password<span style="color: red;">*</span></label><br />
+                <input asp-for="Account.Password" /><br />
+                <span class="msg-error" asp-validation-for="Account.Password" /><br />
+                <div></div>
+                <input type="submit" value="SIGN UP" style="margin-bottom: 30px;" />
+            </form>
+        </div>
+    </div>
+</div>

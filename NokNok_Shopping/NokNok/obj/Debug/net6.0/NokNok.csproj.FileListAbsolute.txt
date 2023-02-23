@@ -1,0 +1,9 @@
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.AssemblyInfo.cs
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.RazorAssemblyInfo.cache
+C:\Users\PC\Desktop\NokNok_Shopping\NokNok_Shopping\NokNok\obj\Debug\net6.0\NokNok.RazorAssemblyInfo.cs
