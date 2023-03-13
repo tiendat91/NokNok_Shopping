@@ -8,15 +8,37 @@
     ".NETCoreApp,Version=v6.0": {
       "NokNok_ShoppingAPI/1.0.0": {
         "dependencies": {
-          "BusinessObject": "1.0.0",
-          "DataAccess": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "NokNok_ShoppingAPI.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {},
+      "AutoMapper/12.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
+        }
+      },
+      "Humanizer.Core/2.8.26": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.SqlClient/2.0.1": {
         "dependencies": {
           "Microsoft.Data.SqlClient.SNI.runtime": "2.0.1",
@@ -122,6 +144,19 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.12": {},
+      "Microsoft.EntityFrameworkCore.Design/5.0.12": {
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.12"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "5.0.12.0",
+            "fileVersion": "5.0.1221.51310"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.12": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.12",
@@ -226,7 +261,7 @@
       "Microsoft.Extensions.Primitives/5.0.0": {},
       "Microsoft.Identity.Client/4.14.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
           "System.Private.Uri": "4.3.2",
@@ -338,7 +373,7 @@
       },
       "Newtonsoft.Json/10.0.1": {
         "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "System.Collections": "4.3.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
@@ -1059,24 +1094,6 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         }
-      },
-      "BusinessObject/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
-          "Microsoft.Extensions.Configuration": "5.0.0",
-          "Microsoft.Extensions.Configuration.Json": "5.0.0"
-        },
-        "runtime": {
-          "BusinessObject.dll": {}
-        }
-      },
-      "DataAccess/1.0.0": {
-        "dependencies": {
-          "BusinessObject": "1.0.0"
-        },
-        "runtime": {
-          "DataAccess.dll": {}
-        }
       }
     }
   },
@@ -1086,12 +1103,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CSharp/4.5.0": {
+    "AutoMapper/12.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+      "sha512": "sha512-hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "path": "automapper/12.0.1",
+      "hashPath": "automapper.12.0.1.nupkg.sha512"
+    },
+    "Humanizer.Core/2.8.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "path": "humanizer.core/2.8.26",
+      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient/2.0.1": {
       "type": "package",
@@ -1127,6 +1158,13 @@
       "sha512": "sha512-MTxvfKtEeQN5E5fBJO/jNfBdcKqw///Pro4uI2o0q8ukMaLsff4TgC8cfPBtzkz6wh55z0b4kldUv2r34Ix3sg==",
       "path": "microsoft.entityframeworkcore.analyzers/5.0.12",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.12.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Design/5.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppGtADfdRv94SQhol8kbYupjjwpNrJ0V2V2jPXzM7zf9cZoDDSmlKXq4sHCdhC4L2ObD8DaykmAcgMIxPleHOg==",
+      "path": "microsoft.entityframeworkcore.design/5.0.12",
+      "hashPath": "microsoft.entityframeworkcore.design.5.0.12.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.12": {
       "type": "package",
@@ -1827,16 +1865,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "BusinessObject/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DataAccess/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

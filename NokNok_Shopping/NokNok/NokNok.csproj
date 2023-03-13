@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj" />
-    <ProjectReference Include="..\EmailService\EmailService.csproj" />
     <ProjectReference Include="..\NokNok_ShoppingAPI\NokNok_ShoppingAPI.csproj" />
   </ItemGroup>
 

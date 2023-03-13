@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {}
+    "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj",
-        "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\obj\\",
+        "projectUniqueName": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj",
+        "projectName": "NokNok_ShoppingAPI",
+        "projectPath": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj",
+        "packagesPath": "C:\\Users\\datda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\datda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -57,130 +61,7 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\DataAccess.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\DataAccess.csproj",
-        "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj",
-        "projectName": "NokNok_ShoppingAPI",
-        "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\BusinessObject\\BusinessObject.csproj"
-              },
-              "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\NokNok_Shopping\\NokNok_Shopping\\DataAccess\\DataAccess.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -205,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
