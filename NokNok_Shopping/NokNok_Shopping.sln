@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NokNok_ShoppingAPI", "NokNok_ShoppingAPI\NokNok_ShoppingAPI.csproj", "{29468F98-C58C-4EEB-9740-F57F6CE9FEB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NokNok", "NokNok\NokNok.csproj", "{2CB7C725-3283-4B09-9EB2-68E80A352D16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NokNok", "NokNok\NokNok.csproj", "{0511AB08-1C47-4A5E-AEE8-11EAD9B50DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{29468F98-C58C-4EEB-9740-F57F6CE9FEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29468F98-C58C-4EEB-9740-F57F6CE9FEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29468F98-C58C-4EEB-9740-F57F6CE9FEB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CB7C725-3283-4B09-9EB2-68E80A352D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CB7C725-3283-4B09-9EB2-68E80A352D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CB7C725-3283-4B09-9EB2-68E80A352D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CB7C725-3283-4B09-9EB2-68E80A352D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0511AB08-1C47-4A5E-AEE8-11EAD9B50DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0511AB08-1C47-4A5E-AEE8-11EAD9B50DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0511AB08-1C47-4A5E-AEE8-11EAD9B50DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0511AB08-1C47-4A5E-AEE8-11EAD9B50DF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,72 +1,225 @@
-﻿@page
-@model MyRazorPage.Pages.IndexModel
+﻿@page 
+@model NokNok.Pages.IndexModel
 @{
+    ViewData["Title"] = "Home page";
 }
-<div id="content">
-    <div id="content-left">
-        <h3>CATEGORY</h3>
-        <ul>
-            @{
-                if (Model.Category != null)
-                {
-                    foreach (var item in Model.Category)
-                    {
-                            <a href="~/product/category?catID=@item.CategoryId">
-                            <li>@item.CategoryName</li></a>
-                    }
-                }
-            }
-        </ul>
-    </div>
-    <div id="content-right">
-        <div class="path">Hot</b></div>
-        <div class="content-main">
-            @if (Model.HotProducts != null)
-            {
-                foreach (var item in Model.HotProducts)
-                {
-                    <div class="product">
-                        <a href="~/product/detail?id=@item.ProductId"><img src="~/img/1.jpg" width="100%" /></a>
-                        <div type="text-decoration: none; font-weight: bold;" class="name"><a href="~/product/detail?id=@item.ProductId">@item.ProductName</a></div>
-                        <div class="price">$ @item.UnitPrice</div>
 
-                        <div style="padding:10px; padding-left:35%"><a asp-page-handler="BuyNow" asp-route-ProID="@item.ProductId" style="text-decoration: none; padding: 6px; border-radius: 10px; background-color: sienna; color: white">Buy now</a></div>
-                    </div>
-                }
-            }
-        </div>
-        <div class="path">Best Sale</b></div>
-        <div class="content-main">
-            @if(Model.BestSeller != null){
-                foreach (var item in Model.BestSeller)
-                {
-                    <div class="product">
-                        <a href="~/product/detail?id=@item.ProductId"><img src="~/img/1.jpg" width="100%" /></a>
-                        <div type="text-decoration: none; font-weight: bold;" class="name"><a href="~/product/detail?id=@item.ProductId">@item.ProductName</a></div>
-                        <div class="price">$ @item.UnitPrice</div>
-                        <div style="padding:10px; padding-left:35%"><a asp-page-handler="BuyNow" asp-route-ProID="@item.ProductId" style="text-decoration: none; padding: 6px; border-radius: 10px; background-color: sienna; color: white">Buy now</a></div>
-                    </div>
-                }
-            }
-        </div>
-        <div class="path">New Product</b></div>
-        <div class="content-main">
-            @{
-                if(Model.NewProducts !=null){
-                    foreach (var item in Model.NewProducts)
-                    {
-                        <div class="product">
-                                <a  href="~/product/detail?id=@item.ProductId"><img src="~/img/1.jpg" width="100%" /></a>
-                            <div class="name"><a type="text-decoration: none; font-weight: bold;" href="~/product/detail?id=@item.ProductId">@item.ProductName</a></div>
-                            <div class="price" >$ @item.UnitPrice</div>
-                            <div style="padding:10px; padding-left:35%"><a asp-page-handler="BuyNow" asp-route-ProID="@item.ProductId" style="text-decoration: none; padding: 6px; border-radius: 10px; background-color: sienna; color: white">Buy now</a></div>
-                        </div>                        
-                    }
-                }
-            }
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>/</li>
+                        <li>shop</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<!--breadcrumbs area end-->
+<!--shop  area start-->
+<div class="shop_area shop_reverse">
+    <div class="container">
+        <div class="shop_inner_area">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <!--sidebar widget start-->
+                    <div class="sidebar_widget">
+                        <div class="widget_list widget_categories">
+                            <h2>Product categories</h2>
+                            <ul>
+                                @foreach(var cat in Model.Categories)
+                                {
+                                    <li><a href="#"> @cat.CategoryName <span>Click</span></a> </li>
+                                }
+@*                                <li><a href="#"> Categories2 <span>10</span></a> </li>
+                                <li><a href="#">Categories3 <span>4</span></a> </li>
+                                <li><a href="#"> Categories4 <span>4</span></a> </li>
+                                <li><a href="#">Categories5 <span>3</span></a> </li>*@
+
+                            </ul>
+                        </div>
+                        <div class="widget_list tag-cloud">
+                            <h2>Popular Tags</h2>
+                            <div class="tag_widget">
+                                <ul>
+                                    <li><a href="#">Creams</a></li>
+                                    <li><a href="#">Eyebrow Pencil</a></li>
+                                    <li><a href="#">Eyeliner</a></li>
+                                    <li><a href="#">Eye Shadow</a></li>
+                                    <li><a href="#">Lotions</a></li>
+                                    <li><a href="#">Mascara</a></li>
+                                    <li><a href="#">Oils</a></li>
+                                    <li><a href="#">Powders</a></li>
+                                    <li><a href="#">Shampoos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--sidebar widget end-->
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <!--shop wrapper start-->
+                    <!--shop toolbar start-->
+                    <div class="shop_title">
+                        <h1>shop</h1>
+                    </div>
+                    <div class="shop_toolbar_wrapper">
+                        <div class="shop_toolbar_btn">
+
+                            <button data-role="grid_3" type="button" class="active btn-grid-3" data-toggle="tooltip" title="3"></button>
+
+                            <button data-role="grid_4" type="button" class=" btn-grid-4" data-toggle="tooltip" title="4"></button>
+
+                            <button data-role="grid_5" type="button" class="btn-grid-5" data-toggle="tooltip" title="5"></button>
+
+                            <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                        </div>
+                        <div class=" niceselect_option">
+
+                            <form class="select_option" action="#">
+                                <select name="orderby" id="short">
+                                    <option selected value="1">Display all</option>
+                                    <option value="4">Sort by price: low to high</option>
+                                    <option value="5">Sort by price: high to low</option>
+                                    <option value="6">Product Name: Z</option>
+                                </select>
+                            </form>
 
 
+                        </div>
+                        <div class="page_amount">
+                            <p>Showing @Model.Products.Count() results</p>
+                        </div>
+                    </div>
+                    <!--shop toolbar end-->
 
+                    <div class="row shop_wrapper">
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <div class="single_product">
+                                
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product15.jpg" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product16.jpg" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="product-details.html" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+
+                                    <div class="double_base">
+                                        <div class="product_sale">
+                                            <span>-7%</span>
+                                        </div>
+                                        <div class="label_product">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product_content grid_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <span class="current_price">£60.00</span>
+                                    <span class="old_price">£99.00</span>
+                                </div>
+
+
+                                <div class="product_content list_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <div class="product_ratting">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product_price">
+                                        <span class="current_price">£60.00</span>
+                                        <span class="old_price">£86.00</span>
+                                    </div>
+                                    <div class="product_desc">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ad, iure incidunt. Ab consequatur temporibus non eveniet inventore doloremque necessitatibus sed, ducimus quisquam, ad asperiores eligendi quia fugiat minus doloribus distinctio assumenda pariatur, quidem laborum quae quasi suscipit. Cupiditate dolor blanditiis rerum aliquid temporibus, libero minus nihil, veniam suscipit? Autem repellendus illo, amet praesentium fugit, velit natus? Dolorum perferendis reiciendis in quam porro ratione eveniet, tempora saepe ducimus, alias?</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        @foreach(var item in Model.Products)
+                        {
+                            <!--PRODUCTS-->
+                            <div class="col-lg-4 col-md-4 col-12 ">
+                                <div class="single_product">
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-details.html"><img src="~/img/product/watch1.jpg" alt=""></a>
+                                        <a class="secondary_img" href="product-details.html"><img src="~/img/product/watch1.jpg" alt=""></a>
+
+                                        <div class="quick_button">
+                                            <a href="product-details.html" title="quick_view">Xem sản phẩm</a>
+                                        </div>
+
+                                        <div class="label_product">
+                                            <span>new</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product_content grid_content">
+                                        <h3><a href="product-details.html">@item.ProductName</a></h3>
+                                        <span class="current_price">£@item.UnitPrice</span>
+                                    </div>
+
+
+                                    <div class="product_content list_content">
+                                        <h3><a href="product-details.html">@item.ProductName</a></h3>
+                                        <div class="product_ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product_price">
+                                            <span class="current_price">£@item.UnitPrice</span>
+                                            <span class="old_price">£99.00</span>
+                                        </div>
+                                        <div class="product_desc">
+                                            <p>****DESCRIPTION***</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END PRODUCTS-->
+                        }
+                    </div>
+
+                    <div class="shop_toolbar t_bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li class="current">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="next"><a href="#">next</a></li>
+                                <li><a href="#">>></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--shop toolbar end-->
+                    <!--shop wrapper end-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--shop  area end-->
+<!--jquery-->

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NokNok_ShoppingAPI\NokNok_ShoppingAPI.csproj" />
   </ItemGroup>
 
