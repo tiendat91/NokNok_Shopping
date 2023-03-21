@@ -26,10 +26,14 @@ namespace NokNok.Pages
             {
                 return;
             }
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
 
             HttpResponseMessage response = await client.GetAsync(ProductApiUrl+$"/{proId}");
             string strData = await response.Content.ReadAsStringAsync();
-            Product = JsonSerializer.Deserialize<Product>(strData);
+            Product = JsonSerializer.Deserialize<Product>(strData,options);
         }
     }
 }
