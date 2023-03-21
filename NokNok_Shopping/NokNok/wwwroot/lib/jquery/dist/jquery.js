@@ -6225,7 +6225,7 @@ jQuery.extend( {
 					}
 
 					// Support: Chrome <=35 - 45+
-					// Assign undefined instead of using delete, see Data#remove
+					// Asdefined instead of using delete, see Data#remove
 					elem[ dataPriv.expando ] = undefined;
 				}
 				if ( elem[ dataUser.expando ] ) {

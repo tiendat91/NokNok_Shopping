@@ -53,6 +53,16 @@ namespace NokNok_ShoppingAPI.Controllers
             }
             return Ok(products);
         }
+        [HttpGet("GetProductById/{id}")]
+        public IActionResult GetProductById([FromRoute]int id)
+        {
+            var product = ProductsDAO.GetProductById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return Ok(product);
+        }
 
         [HttpPut]
         public IActionResult UpdateProduct([FromBody] Product product)

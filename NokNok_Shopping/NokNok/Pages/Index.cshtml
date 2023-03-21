@@ -45,8 +45,7 @@
                                 <ul>
                                     @foreach (var item in Model.PopularProducts)
                                     {
-                                        <li><a href="#">@item.ProductName</a></li>
-
+                                        <li><a href="~/ProductDetails?proId=@item.ProductId">@item.ProductName</a></li>
                                     }
                                 </ul>
                             </div>

@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\NokNok
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,12 +32,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/ProductDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Shared/_ValidationScriptsPartial.cshtml]
