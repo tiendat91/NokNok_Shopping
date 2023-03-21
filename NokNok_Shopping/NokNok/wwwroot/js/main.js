@@ -528,7 +528,7 @@
     /*--
     
     /*niceSelect*/
-     $('.select_option').niceSelect();
+     //$('.select_option').niceSelect();
     
 
     /*--

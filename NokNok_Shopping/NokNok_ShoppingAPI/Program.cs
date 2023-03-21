@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using NokNok_ShoppingAPI.Models;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.OData;
+using Microsoft.OData.ModelBuilder;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//ODATA
+var modelBuilder = new ODataConventionModelBuilder();
+modelBuilder.EntitySet<Product>("Products");
+
+
+
 
 // Add services to the container.
 builder.Services.AddDbContext<NokNok_ShoppingContext>();
@@ -9,6 +19,13 @@ builder.Services.AddDbContext<NokNok_ShoppingContext>();
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+//ODATA
+builder.Services.AddControllers().AddOData(
+    options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null).AddRouteComponents(
+        "odata",
+        modelBuilder.GetEdmModel()));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

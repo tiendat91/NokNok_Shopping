@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using NokNok_ShoppingAPI.DAO;
 using NokNok_ShoppingAPI.DTO;
@@ -38,6 +39,7 @@ namespace NokNok_ShoppingAPI.Controllers
         }
 
         [HttpGet("GetAllProducts")]
+        [EnableQuery()]
         public IActionResult GetAllProducts()
         {
             //USING MAPPER

@@ -34,13 +34,13 @@
                             <ul>
                                 @foreach(var cat in Model.Categories)
                                 {
-                                    <li><a href="#"> @cat.CategoryName <span>Click</span></a> </li>
+                                    <li><a href="/Index?category=@cat.CategoryId"> @cat.CategoryName <span>Click</span></a> </li>
                                 }
 
                             </ul>
                         </div>
                         <div class="widget_list tag-cloud">
-                            <h2>Popular Tags</h2>
+                            <h2>Popular Products</h2>
                             <div class="tag_widget">
                                 <ul>
                                     @foreach (var item in Model.PopularProducts)
@@ -59,7 +59,6 @@
                     <!--shop wrapper start-->
                     <!--shop toolbar start-->
                     <div class="shop_title">
-                        <h1>shop</h1>
                     </div>
                     <div class="shop_toolbar_wrapper">
                         <div class="shop_toolbar_btn">
@@ -72,18 +71,12 @@
 
                             <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
                         </div>
-                        <div class=" niceselect_option">
-
-                            <form method="get">
-                                <select name="orderby" id="short">
+                        <div class="">
+                            <form id="order" asp-page="index" method="get">
+                                <select class="niceselect_option" asp-for="@Model.SelectedOrder" asp-items="@Model.OrderOption" type="submit" id="short" onchange="document.getElementById('order').submit()">
                                     <option selected value="0">Display all</option>
-                                    <option value="1">Sort by price: low to high</option>
-                                    <option value="2">Sort by price: high to low</option>
-                                    <option value="3">Product Name: A - Z</option>
                                 </select>
                             </form>
-
-
                         </div>
                         <div class="page_amount">
                             <p>Showing @Model.Products.Count() results</p>
@@ -92,6 +85,10 @@
                     <!--shop toolbar end-->
 
                     <div class="row shop_wrapper">
+                        @if (Model.Products.Count() == 0)
+                        {
+                            <h2>No Data</h2>
+                        }
                         @foreach(var item in Model.Products)
                         {
                             <!--PRODUCTS-->
@@ -143,7 +140,8 @@
                         }
                     </div>
 
-                    <div class="shop_toolbar t_bottom">
+                   
+@*                    <div class="shop_toolbar t_bottom">
                         <div class="pagination">
                             <ul>
                                 <li class="current">1</li>
@@ -153,7 +151,7 @@
                                 <li><a href="#">>></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>*@
                     <!--shop toolbar end-->
                     <!--shop wrapper end-->
                 </div>

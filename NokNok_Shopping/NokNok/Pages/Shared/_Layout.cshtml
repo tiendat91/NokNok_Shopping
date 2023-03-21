@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="search_bar">
-                        <form action="#">
+                        <form method="get">
                             <select class="select_option" name="select" id="categori">
                                 <option selected value="1">All Categories</option>
                                 <option value="2">Accessories</option>
@@ -266,8 +266,7 @@
                 <div class="col-lg-7 col-md-12">
                     <div class="welcome_text">
                         <ul>
-                            <li><span>Free Delivery:</span> Take advantage of our time to save event</li>
-                            <li><span>Free Returns *</span> Satisfaction guaranteed</li>
+                            <li><span>Welcome to NokNok website</span> | Hope you will find your satisfaction here</li>
                         </ul>
                     </div>
                 </div>
@@ -297,15 +296,15 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="search_bar">
-                            <form action="#">
-                                <input placeholder="Search entire store here..." type="text">
+                            <form asp-page="index" method="get">
+                                <input name="search" placeholder="Search entire store here..." type="text">
                                 <button type="submit"><i class="ion-ios-search-strong"></i></button>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="logo">
-                            <a href="index.html"><img src="~/img/logo/logo.png" style="max-width:40%;" alt=""></a>
+                            <a href="~/Index"><img src="~/img/logo/logo.png" style="max-width:40%;" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
