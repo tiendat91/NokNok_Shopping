@@ -94,11 +94,11 @@
                             <div class="col-lg-4 col-md-4 col-12 ">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="product-details.html"><img src="~/img/product/watch1.jpg" alt=""></a>
-                                        <a class="secondary_img" href="product-details.html"><img src="~/img/product/watch1.jpg" alt=""></a>
+                                        <a class="primary_img" href="~/ProductDetails?proId=@item.ProductId"><img src="~/img/product/watch1.jpg" alt=""></a>
+                                        <a class="secondary_img" href="~/ProductDetails?proId=@item.ProductId"><img src="~/img/product/watch1.jpg" alt=""></a>
 
                                         <div class="quick_button">
-                                            <a href="product-details.html" title="quick_view">Xem sản phẩm</a>
+                                            <a href="~/ProductDetails?proId=@item.ProductId" title="quick_view">Xem sản phẩm</a>
                                         </div>
 
                                         <div class="label_product">
@@ -107,13 +107,13 @@
                                     </div>
 
                                     <div class="product_content grid_content">
-                                        <h3><a href="product-details.html">@item.ProductName</a></h3>
+                                        <h3><a href="~/ProductDetails?proId=@item.ProductId">@item.ProductName</a></h3>
                                         <span class="current_price">£@item.UnitPrice</span>
                                     </div>
 
 
                                     <div class="product_content list_content">
-                                        <h3><a href="product-details.html">@item.ProductName</a></h3>
+                                        <h3><a href="~/ProductDetails?proId=@item.ProductId">@item.ProductName</a></h3>
                                         <div class="product_ratting">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
