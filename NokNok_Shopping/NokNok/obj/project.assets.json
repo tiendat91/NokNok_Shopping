@@ -6429,19 +6429,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dell\\.nuget\\packages\\": {}
+    "C:\\Users\\datda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\Documents\\GitHub\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\NokNok.csproj",
+      "projectUniqueName": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\NokNok.csproj",
       "projectName": "NokNok",
-      "projectPath": "C:\\Users\\dell\\Documents\\GitHub\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\NokNok.csproj",
-      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\Documents\\GitHub\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\obj\\",
+      "projectPath": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\NokNok.csproj",
+      "packagesPath": "C:\\Users\\datda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\datda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6455,8 +6455,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\dell\\Documents\\GitHub\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {
-              "projectPath": "C:\\Users\\dell\\Documents\\GitHub\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj"
+            "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj": {
+              "projectPath": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\NokNok_ShoppingAPI.csproj"
             }
           }
         }
@@ -6489,7 +6489,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

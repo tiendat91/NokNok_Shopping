@@ -212,3 +212,4 @@ C:\Users\dell\Documents\GitHub\NokNok_Shopping\NokNok_Shopping\NokNok_ShoppingAP
 C:\Users\dell\Documents\GitHub\NokNok_Shopping\NokNok_Shopping\NokNok_ShoppingAPI\obj\Debug\net6.0\NokNok_ShoppingAPI.pdb
 C:\Users\dell\Documents\GitHub\NokNok_Shopping\NokNok_Shopping\NokNok_ShoppingAPI\obj\Debug\net6.0\NokNok_ShoppingAPI.genruntimeconfig.cache
 C:\Users\dell\Documents\GitHub\NokNok_Shopping\NokNok_Shopping\NokNok_ShoppingAPI\obj\Debug\net6.0\ref\NokNok_ShoppingAPI.dll
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\NokNok_ShoppingAPI\bin\Debug\net6.0\NokNok_ShoppingAPI.staticwebassets.runtime.json

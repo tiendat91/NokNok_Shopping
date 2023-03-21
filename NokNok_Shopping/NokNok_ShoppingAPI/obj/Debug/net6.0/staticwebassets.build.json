@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "q04f3ai23gCIEZFmvN6mT9AvSw0W/P7nI0Q7w22e6OY=",
+  "Hash": "vWSURVsbxSG9dNKvACEZJEhq6d66d3xKEmkNUOa9b3c=",
   "Source": "NokNok_ShoppingAPI",
   "BasePath": "_content/NokNok_ShoppingAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NokNok_ShoppingAPI\\wwwroot",
+      "Source": "NokNok_ShoppingAPI",
+      "ContentRoot": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok_ShoppingAPI\\wwwroot\\",
+      "BasePath": "_content/NokNok_ShoppingAPI",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
