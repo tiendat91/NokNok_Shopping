@@ -11,8 +11,6 @@ var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<Product>("Products");
 
 
-
-
 // Add services to the container.
 builder.Services.AddDbContext<NokNok_ShoppingContext>();
 //Fix recycle json
@@ -54,6 +52,7 @@ app.UseCors(builder =>
     .AllowAnyHeader();
 });
 
+//app.UseStatusCodePagesWithRedirects("/PageNotFound");
 
 app.UseHttpsRedirection();
 

@@ -20,6 +20,26 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Admin/OrderAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJBZG1pblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Admin/OrderAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJBZG1pblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Admin/OrderAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJBZG1pblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Admin/OrderAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJBZG1pblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Admin/OrderAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/PageNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZU5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Privacy.cshtml]

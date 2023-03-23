@@ -8,7 +8,7 @@ namespace PE_PRN231_Sum22B1.DTO
     {
         public MapperProfile()
         {
-            CreateMap<Product, ProductDTO>();
+            CreateMap<Order, OrderDTO>();
         }
     }
 }

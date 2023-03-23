@@ -11,7 +11,7 @@ using PE_PRN231_Sum22B1.DTO;
 
 namespace NokNok_ShoppingAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class Products : ControllerBase
     {
@@ -38,13 +38,10 @@ namespace NokNok_ShoppingAPI.Controllers
             return NotFound();
         }
 
-        [HttpGet("GetAllProducts")]
+        [HttpGet]
         [EnableQuery()]
         public IActionResult GetAllProducts()
         {
-            //USING MAPPER
-            //List<ProductDTO> productDTOs;
-            //productDTOs = context.Products.ProjectTo<ProductDTO>(config).ToList();
 
             var products = ProductsDAO.GetProducts();
             if (products == null)
@@ -53,7 +50,7 @@ namespace NokNok_ShoppingAPI.Controllers
             }
             return Ok(products);
         }
-        [HttpGet("GetProductById/{id}")]
+        [HttpGet("{id}")]
         public IActionResult GetProductById([FromRoute]int id)
         {
             var product = ProductsDAO.GetProductById(id);
@@ -68,11 +65,11 @@ namespace NokNok_ShoppingAPI.Controllers
         public IActionResult UpdateProduct([FromBody] Product product)
         {
             var p = ProductsDAO.GetProductById(product.ProductId);
-            if (product == null)
+            if (p == null)
             {
                 return NotFound();
             }
-
+            ProductsDAO.UpdateProduct(product);
             return Ok(product);
         }
 
@@ -94,8 +91,5 @@ namespace NokNok_ShoppingAPI.Controllers
                 throw;
             }
         }
-
-
-
     }
 }
