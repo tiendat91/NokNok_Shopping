@@ -1,0 +1,36 @@
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.deps.json
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.dll
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.pdb
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfo.cs
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.dll
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\refint\EmailService.dll
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.pdb
+C:\Users\PC\Desktop\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\ref\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.deps.json
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\bin\Debug\net6.0\EmailService.pdb
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.csproj.AssemblyReference.cache
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfoInputs.cache
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfo.cs
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\refint\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\EmailService.pdb
+C:\Users\datda\OneDrive\Máy tính\PRN221_ShoppingWebsite\MyRazorPage\EmailService\obj\Debug\net6.0\ref\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\bin\Debug\net6.0\EmailService.deps.json
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\bin\Debug\net6.0\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\bin\Debug\net6.0\EmailService.pdb
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.csproj.AssemblyReference.cache
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfoInputs.cache
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.AssemblyInfo.cs
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\refint\EmailService.dll
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\EmailService.pdb
+C:\Users\datda\OneDrive\Máy tính\NokNok_Shopping\NokNok_Shopping\EmailService\obj\Debug\net6.0\ref\EmailService.dll

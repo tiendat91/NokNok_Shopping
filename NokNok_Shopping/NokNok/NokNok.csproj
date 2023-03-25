@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EmailService\EmailService.csproj" />
     <ProjectReference Include="..\NokNok_ShoppingAPI\NokNok_ShoppingAPI.csproj" />
   </ItemGroup>
 

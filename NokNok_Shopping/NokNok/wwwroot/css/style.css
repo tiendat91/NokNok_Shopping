@@ -7284,7 +7284,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #ff6a28;
 }
 .copyright_area p a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer_bottom {
@@ -11329,7 +11329,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .blog_content a.read_more {
   color: #747474;
-  text-decoration: underline;
+  text-decoration: none;
   font-style: italic;
   margin-bottom: 7px;
 }

@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\img\\about\\about2.jpg"
     },
     {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\about\\avatar.png",
+      "PackagePath": "staticwebassets\\img\\about\\avatar.png"
+    },
+    {
       "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\about\\banner.jpg",
       "PackagePath": "staticwebassets\\img\\about\\banner.jpg"
     },
@@ -229,6 +233,30 @@
       "PackagePath": "staticwebassets\\img\\pagenotfound\\right-shape.png"
     },
     {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\laptop.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\laptop.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\loa.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\loa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\manhinh.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\manhinh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\maytinhbang.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\maytinhbang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\phone.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\phone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\phukien.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\phukien.jpg"
+    },
+    {
       "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\product1.jpg",
       "PackagePath": "staticwebassets\\img\\product\\product1.jpg"
     },
@@ -343,6 +371,10 @@
     {
       "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\product9.jpg",
       "PackagePath": "staticwebassets\\img\\product\\product9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\tivi.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\tivi.jpg"
     },
     {
       "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\watch1.jpg",

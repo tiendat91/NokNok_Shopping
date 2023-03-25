@@ -1,3 +1,4 @@
+using EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,14 @@ builder.Services.AddSession(options =>
 //COOKIE AUTHENTICATION
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie();
+
+//EMAIL SENDER
+var emailConfig = builder.Configuration
+        .GetSection("EmailConfiguration")
+        .Get<EmailConfiguration>();
+builder.Services.AddSingleton(emailConfig);
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+
 
 var app = builder.Build();
 
@@ -46,5 +55,7 @@ app.UseEndpoints(endpoints =>
 });
 
 app.MapRazorPages();
+
+app.MapDefaultControllerRoute();
 
 app.Run();
