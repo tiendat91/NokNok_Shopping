@@ -1,6 +1,7 @@
 ﻿@page
 @model NokNok.Pages.CartModel
 @{
+    decimal? amount = 0;
 }
 
 <!--breadcrumbs area start-->
@@ -40,37 +41,34 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="product_thumb"><a href="#"><img src="~/img/s-product/product.jpg" alt=""></a></td>
-                                        <td class="product_name"><a href="#">Handbag fringilla</a></td>
-                                        <td class="product-price">£65.00</td>
-                                        <td class="product_quantity"><input min="1" max="100" value="1" type="number"></td>
-                                        <td class="product_total">£130.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="product_thumb"><a href="#"><img src="~/img/s-product/product2.jpg" alt=""></a></td>
-                                        <td class="product_name"><a href="#">Handbags justo</a></td>
-                                        <td class="product-price">£90.00</td>
-                                        <td class="product_quantity"><input min="1" max="100" value="1" type="number"></td>
-                                        <td class="product_total">£180.00</td>
-
-
-                                    </tr>
-                                    <tr>
-                                        <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                        <td class="product_thumb"><a href="#"><img src="~/img/s-product/product3.jpg" alt=""></a></td>
-                                        <td class="product_name"><a href="#">Handbag elit</a></td>
-                                        <td class="product-price">£80.00</td>
-                                        <td class="product_quantity"><input min="1" max="100" value="1" type="number"></td>
-                                        <td class="product_total">£160.00</td>
-                                    </tr>
+                                @if (Model.ListCarItems.Count > 0)
+                                    {
+                                        @foreach (var item in Model.ListCarItems)
+                                        {
+                                            <tr>
+                                                <td class="product_remove"> <a asp-page-handler="RemoveCart" asp-route-id="@item.product.ProductId"><i class="fa fa-trash-o"></i></a></td>
+                                                <td class="product_thumb"><a href="#"><img src="~/img/s-product/product.jpg" alt=""></a></td>
+                                                <td class="product_name"><a href="#">@item.product.ProductName</a></td>
+                                                <td class="product-price">
+                                                    $ @item.product.UnitPrice
+                                                </td>
+                                                <td class="product_quantity">
+                                                    <a  asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-action="1"> - </a>
+                                                    <a  asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-action="2"> + </a>
+                                                    <input type="text" value="@item.quantity" disabled />
+                                                </td>
+                                                <td class="product_total">
+                                                    @{
+                                                        var price = item.quantity * item.product.UnitPrice;
+                                                        amount += price;
+                                                    }
+                                                    $ @($"{price}")
+                                                </td>
+                                            </tr>
+                                        }
+                                }
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="cart_submit">
-                            <button type="submit">update cart</button>
                         </div>
                     </div>
                 </div>
@@ -95,21 +93,25 @@
                             <div class="coupon_inner">
                                 <div class="cart_subtotal">
                                     <p>Subtotal</p>
-                                    <p class="cart_amount">£215.00</p>
+                                    <p class="cart_amount">$ @amount</p>
                                 </div>
                                 <div class="cart_subtotal ">
                                     <p>Shipping</p>
-                                    <p class="cart_amount"><span>Flat Rate:</span> £255.00</p>
+                                    <p class="cart_amount">$ 20.00</p>
                                 </div>
                                 <a href="#">Calculate shipping</a>
-
+                                @{
+                                    amount += 20;
+                                }
                                 <div class="cart_subtotal">
                                     <p>Total</p>
-                                    <p class="cart_amount">£215.00</p>
+                                    <p class="cart_amount">$ @amount</p>
                                 </div>
-                                <div class="checkout_btn">
-                                    <a href="#">Proceed to Checkout</a>
-                                </div>
+                                 <form method="post">
+                                    <div class="checkout_btn">
+                                        <button type="submit" >Proceed to Checkout</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

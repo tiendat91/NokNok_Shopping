@@ -124,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nT3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/PageNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZU5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -146,6 +150,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/User/OrderCancel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxPcmRlckNhbmNlbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/User/OrderHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxPcmRlckhpc3RvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/User/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxQcm9maWxlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/datda/OneDrive/Máy tính/NokNok_Shopping/NokNok_Shopping/NokNok/Pages/_ViewImports.cshtml]

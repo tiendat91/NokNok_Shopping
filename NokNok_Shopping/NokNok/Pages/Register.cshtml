@@ -13,18 +13,38 @@
             <div class="col-lg-6 col-md-6">
                 <div class="account_form register">
                     <h2>Register</h2>
-                    <form action="#">
-                        <p>
-                            <label>Email address  <span>*</span></label>
-                            <input type="text">
-                        </p>
-                        <p>
-                            <label>Passwords <span>*</span></label>
-                            <input type="password">
-                        </p>
-                        <div class="login_submit">
-                            <button type="submit">Register</button>
-                        </div>
+                    <div class="msg-error" style="text-align:left">@ViewData["msg"]</div>
+                    <form method="post">
+                        <input asp-for="Customer.CustomerId" value="1" type="hidden" />
+                        <label>Company name<span style="color: red;">*</span></label><br />
+                        <input asp-for="Customer.CompanyName" /><br />
+                        <span class="msg-error" asp-validation-for="Customer.CompanyName" /><br />
+
+                        <label>Contact name<span style="color: red;">*</span></label><br />
+                        <input asp-for="Customer.ContactName" /><br />
+                        <span class="msg-error" asp-validation-for="Customer.ContactName" /><br />
+
+                        <label>Contact title<span style="color: red;">*</span></label><br />
+                        <input asp-for="Customer.ContactTitle" /><br />
+                        <span class="msg-error" asp-validation-for="Customer.ContactTitle" /><br />
+
+                        <label>Address<span style="color: red;">*</span></label><br />
+                        <input asp-for="Customer.Address" /><br />
+                        <span class="msg-error" asp-validation-for="Customer.Address" /><br />
+
+                        <label>Email<span style="color: red;">*</span></label><br />
+                        <input asp-for="Account.Email" /><br />
+                        <span class="msg-error" asp-validation-for="Account.Email" />
+
+                        <label>Password<span style="color: red;">*</span></label><br />
+                        <input asp-for="Account.Password" type="password" /><br />
+                        <span class="msg-error" asp-validation-for="Account.Password" /><br />
+
+                        <label>Re-Password<span style="color: red;">*</span></label><br />
+                        <input asp-for="Account.Password" type="password" /><br />
+                        <span class="msg-error" asp-validation-for="Account.Password" /><br />
+                        <div></div>
+                        <input type="submit" value="SIGN UP" style="margin-bottom: 30px;" />
                     </form>
                 </div>
             </div>

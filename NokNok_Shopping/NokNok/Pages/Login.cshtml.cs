@@ -47,6 +47,7 @@ namespace NokNok.Pages
             }
             else
             {
+                //COOKIE AUTHENTICATION
                 var claims = new List<Claim>() {
                         new Claim(ClaimTypes.Name, acc.Email),
                         new Claim(ClaimTypes.Role, acc.Role.ToString()),

@@ -64,39 +64,42 @@
             </div>
             <div class="col-lg-7 col-md-7">
                 <div class="product_d_right">
-                    <form action="#">
-
-                        <h1>@Model.Product.ProductName</h1>
-                        <div class=" product_ratting">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                <li class="review"><a href="#"> 1 review </a></li>
-                                <li class="review"><a href="#"> Write a review </a></li>
-                            </ul>
-                        </div>
-                        <div class="product_price">
-                            <span class="current_price">$@Model.Product.UnitPrice</span>
-                        </div>
-                        <div class="product_desc">
-                            <p>**********Describetion**********</p>
-                        </div>
-                        <div class="product_variant quantity">
-                            <label>quantity</label>
-                            <input min="1" max="100" value="1" type="number">
-                            <button class="button" type="submit">add to cart</button>
-                        </div>
-                        <div class=" product_d_action">
-                            <ul>
-                                <li><a href="#" title="Add to wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i> Add to Wish List</a></li>
-                                <li><a href="#" title="Add to Compare"><i class="fa fa-sliders" aria-hidden="true"></i> Compare this Product</a></li>
-                            </ul>
-                        </div>
-
-                    </form>
+                        @if (Model.Product != null)
+                        {
+                            <h1>@Model.Product.ProductName</h1>
+                            <div class=" product_ratting">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li class="review"><a href="#"> 1 review </a></li>
+                                    <li class="review"><a href="#"> Write a review </a></li>
+                                </ul>
+                            </div>
+                            <div class="product_price">
+                                <span class="current_price">$@Model.Product.UnitPrice</span>
+                            </div>
+                            <div class="product_desc">
+                                <p>**********Describetion**********</p>
+                            </div>
+                            <div class="product_variant quantity">
+                                <label>quantity</label>
+                                <input min="1" max="100" value="1" type="number">
+                                <form method="post">
+                                    <input name="ProID" value="@Model.Product.ProductId" hidden>
+                                    <button class="button" type="submit">add to cart</button>
+                                    <div class="msg-error" style="text-align:left">@ViewData["msg"]</div>
+                                </form>
+                            </div>
+                            <div class=" product_d_action">
+                                <ul>
+                                    <li><a href="#" title="Add to wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i> Add to Wish List</a></li>
+                                    <li><a href="#" title="Add to Compare"><i class="fa fa-sliders" aria-hidden="true"></i> Compare this Product</a></li>
+                                </ul>
+                            </div>
+                        }
                     <div class="priduct_social">
                         <h3>Share on:</h3>
                         <ul>
@@ -107,7 +110,7 @@
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
-
+                    }
                 </div>
             </div>
         </div>

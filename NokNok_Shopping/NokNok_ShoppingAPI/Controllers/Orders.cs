@@ -38,6 +38,13 @@ namespace NokNok_ShoppingAPI.Controllers
             return NotFound();
         }
 
+        [HttpPost]
+        public IActionResult CreateOrderDetail([FromBody] OrderDetail orderDetail)
+        {
+                OrderDetailsDAO.CreateOrderDetail(orderDetail);
+                return Ok(orderDetail);
+        }
+
         [HttpGet]
         [EnableQuery()]
         public IActionResult GetOrders()

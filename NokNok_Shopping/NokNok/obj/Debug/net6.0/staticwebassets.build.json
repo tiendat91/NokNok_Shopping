@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s06pShvcd9yBdONVzWCYkoLUN+0wHXzzp0VSSIs6Ldc=",
+  "Hash": "j6dnbSz/QpiGLrIG98MDAnZt7GMgnzuSXCcgqqvLKSQ=",
   "Source": "NokNok",
   "BasePath": "_content/NokNok",
   "Mode": "Default",
@@ -986,6 +986,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\pagenotfound\\image-left.png",
+      "SourceId": "NokNok",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\",
+      "BasePath": "_content/NokNok",
+      "RelativePath": "img/pagenotfound/image-left.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pagenotfound\\image-left.png"
+    },
+    {
+      "Identity": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\pagenotfound\\right-shape.png",
+      "SourceId": "NokNok",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\",
+      "BasePath": "_content/NokNok",
+      "RelativePath": "img/pagenotfound/right-shape.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pagenotfound\\right-shape.png"
     },
     {
       "Identity": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\img\\product\\product1.jpg",
