@@ -43,6 +43,7 @@ namespace NokNok_ShoppingAPI.DAO
             {
                 using (var context = new NokNok_ShoppingContext())
                 {
+                    p.Discontinued = true;
                     context.Products.Add(p);
                     context.SaveChanges();
                 }

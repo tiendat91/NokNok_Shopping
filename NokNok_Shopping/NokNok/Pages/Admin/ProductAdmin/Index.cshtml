@@ -1,0 +1,59 @@
+﻿@page
+@model NokNok.Pages.Admin.ProductAdmin.IndexModel
+@{
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Product Management</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].QuantityPerUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].UnitsInStock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Products) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+            </td>
+            <td>
+                $ @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsInStock)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

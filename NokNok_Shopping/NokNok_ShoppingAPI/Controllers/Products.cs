@@ -30,7 +30,7 @@ namespace NokNok_ShoppingAPI.Controllers
         {
             //Validate data
             var p = ProductsDAO.GetProductById(product.ProductId);
-            if (product ==  null)
+            if (p ==  null)
             {
                 ProductsDAO.CreateProduct(product);
                 return Ok(product);
@@ -69,6 +69,7 @@ namespace NokNok_ShoppingAPI.Controllers
             {
                 return NotFound();
             }
+            product.Discontinued = true;
             ProductsDAO.UpdateProduct(product);
             return Ok(product);
         }

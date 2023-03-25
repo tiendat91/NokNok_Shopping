@@ -205,11 +205,13 @@
                             <li class="top_links">
                                 <a href="#">My Account <i class="ion-chevron-down"></i></a>
                                 <ul class="dropdown_links">
-                                    <li><a href="wishlist.html">My Wish List </a></li>
+                                    @if (User.IsInRole("1"))
+                                    {
+                                        <li><a href="~/Admin/Dashboard">Administrator </a></li>
+                                    }
                                     <li><a href="my-account.html">My Account </a></li>
                                     <li><a href="~/Login">Login</a></li>
                                     <li><a href="~/Register">Register</a></li>
-                                    <li><a href="compare.html">Compare Products  </a></li>
                                 </ul>
                             </li>
                         </ul>

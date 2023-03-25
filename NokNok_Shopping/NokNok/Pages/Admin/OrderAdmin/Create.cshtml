@@ -1,6 +1,9 @@
 ﻿@page
 @model NokNok.Pages.Admin.OrderAdmin.CreateModel
-
+@{
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid px-4">
 <h4>Order</h4>
 <hr />
 <div class="row">
@@ -74,3 +77,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+</div>

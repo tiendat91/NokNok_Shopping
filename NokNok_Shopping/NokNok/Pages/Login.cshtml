@@ -11,14 +11,17 @@
             <div class="col-lg-6 col-md-6">
                 <div class="account_form">
                     <h2>login</h2>
-                    <form action="#">
+                    <div class="msg-error" style="text-align:left">@ViewData["msg"]</div>
+                    <form method="post">
                         <p>
                             <label>Username or email <span>*</span></label>
-                            <input type="text">
+                            <input asp-for="Account.Email" type="text">
+                            <span class="msg-error" asp-validation-for="Account.Email" />
                         </p>
                         <p>
                             <label>Passwords <span>*</span></label>
-                            <input type="password">
+                            <input asp-for="Account.Password" type="password">
+                            <span class="msg-error" asp-validation-for="Account.Password" />
                         </p>
                         <div class="login_submit">
                             <a href="#">Lost your password?</a>

@@ -1,0 +1,54 @@
+﻿@page
+@model NokNok.Pages.Admin.CustomerAdmin.IndexModel
+@{
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Customer Management</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ContactTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactTitle)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CustomerId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CustomerId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CustomerId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+</div>
+

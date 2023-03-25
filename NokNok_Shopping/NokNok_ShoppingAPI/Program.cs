@@ -3,12 +3,23 @@ using NokNok_ShoppingAPI.Models;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.OData;
 using Microsoft.OData.ModelBuilder;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //ODATA
 var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<Product>("Products");
+
+//add session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(5);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 
 // Add services to the container.
@@ -53,6 +64,12 @@ app.UseCors(builder =>
 });
 
 //app.UseStatusCodePagesWithRedirects("/PageNotFound");
+
+app.UseSession();
+
+app.UseRouting();
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

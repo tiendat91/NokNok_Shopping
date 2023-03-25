@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Controller_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/RazorPage</Controller_SelectedScaffolderCategoryPath>
-    <RazorPage_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</RazorPage_SelectedScaffolderID>
+    <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ViewDialogWidth>650.222222222222</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_IsLayoutPageSelected>True</WebStackScaffolding_IsLayoutPageSelected>

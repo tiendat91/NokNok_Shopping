@@ -70,7 +70,7 @@ namespace NokNok_ShoppingAPI.Controllers
             return Ok(employee);
         }
 
-        [HttpDelete("{cusId}")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteEmployee([FromRoute] int id)
         {
             try

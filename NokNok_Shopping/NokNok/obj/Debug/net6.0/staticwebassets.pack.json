@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets\\NokNok.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\css\\styles.css",
+      "PackagePath": "staticwebassets\\admin\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\admin\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\admin\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\admin\\js\\scripts.js"
+    },
+    {
       "Id": "C:\\Users\\datda\\OneDrive\\Máy tính\\NokNok_Shopping\\NokNok_Shopping\\NokNok\\wwwroot\\css\\plugins.css",
       "PackagePath": "staticwebassets\\css\\plugins.css"
     },
