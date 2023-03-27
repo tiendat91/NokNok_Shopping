@@ -9,14 +9,17 @@ NokNok - Website mua bán thiết bị điện tử (ASP .NET CORE API - .NET 6)
 + OData support using ASP.NET Core
 + Call and get API
 
-### Home
+## Home
+
 ![home](https://user-images.githubusercontent.com/97070952/227844949-985ff332-033a-4c03-8ad4-9154521c2133.PNG)
 
 
-### Product Display
+## Product Display
+
 ![detail](https://user-images.githubusercontent.com/97070952/227845464-18b6ea56-1b5a-4708-b77c-672a80e862d4.PNG)
 
-### Order History
+## Order History
+
 ![history](https://user-images.githubusercontent.com/97070952/227845638-bd69837e-3974-4e08-9b94-a35f931793a7.PNG)
 
 
