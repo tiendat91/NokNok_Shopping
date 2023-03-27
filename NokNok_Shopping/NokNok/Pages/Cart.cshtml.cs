@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Options;
 using NokNok_ShoppingAPI.Models;
+using System.ComponentModel;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
@@ -12,8 +14,8 @@ namespace NokNok.Pages
         private readonly HttpClient client = null;
         private string CustomerApiUrl = "";
         private string OrderApiUrl = "";
-        public IList<Customer> Customers { get; set; }
-        public IList<Order> Orders { get; set; }
+        public List<Customer> Customers { get; set; }
+        public List<Order> Orders { get; set; }
         public CartModel()
         {
             client = new HttpClient();
@@ -79,7 +81,7 @@ namespace NokNok.Pages
             return new List<CartItems>();
         }
 
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnGetOrder()
         {
 
             //Nếu chưa đăng nhập -> chuyển về signIn
@@ -97,6 +99,19 @@ namespace NokNok.Pages
                     return Page();
                 }
 
+                //TẠM FIX
+                return RedirectToPage("/User/OrderHistory");
+
+
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+
+                HttpResponseMessage responseO = await client.GetAsync(OrderApiUrl);
+                string strDataO = await responseO.Content.ReadAsStringAsync();
+                Orders = JsonSerializer.Deserialize<List<Order>>(strDataO, options);
+
                 //tạo order
                 var Ordered = new Order()
                 {
@@ -105,6 +120,8 @@ namespace NokNok.Pages
                     OrderDate = DateTime.Now,
                     RequiredDate = requiredDate,
                 };
+
+                Ordered.OrderId = OrderedIdByCustomerID();
 
                 string data = JsonSerializer.Serialize(Ordered);
                 await client.PostAsync("http://localhost:5000/api/Orders/CreateOrder", new StringContent(data, Encoding.UTF8, "application/json"));
@@ -117,7 +134,7 @@ namespace NokNok.Pages
                         OrderId = Ordered.OrderId,
                         UnitPrice = (decimal)item.product.UnitPrice,
                         Quantity = (short)item.quantity,
-                        Discount = 0,
+                        Discount = 0f,
                     };
 
                     string dataOrderDetail = JsonSerializer.Serialize(NewOrderDetail);
@@ -140,10 +157,6 @@ namespace NokNok.Pages
         public int OrderedIdByCustomerID()
         {
             var cusID = HttpContext.Session.GetString("CustomerID");
-
-
-
-
             return (int)Orders.OrderBy(s => s.OrderId).LastOrDefault(s => s.CustomerId == cusID).OrderId;
         }
 
@@ -167,17 +180,17 @@ namespace NokNok.Pages
             Response.Cookies.Append("CartItemsAddToCart", jsonCart, option);
         }
 
-        public IActionResult OnGetUpdateNumber(int id, int action)
+        public IActionResult OnGetUpdateNumber(int id, string Choice)
         {
             var cart = GetCartItemsInCookie();
             var items = cart.Find(p => p.product.ProductId == id);
             if (items != null)
             {
-                if (action == 2)
+                if (Choice == "Add")
                 {
                     items.quantity += 1;
                 }
-                else
+                if(Choice == "Sub")
                 {
                     items.quantity -= 1;
                     if (items.quantity <= 0)

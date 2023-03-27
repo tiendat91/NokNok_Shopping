@@ -41,8 +41,17 @@ namespace NokNok_ShoppingAPI.Controllers
         [HttpPost]
         public IActionResult CreateOrderDetail([FromBody] OrderDetail orderDetail)
         {
-                OrderDetailsDAO.CreateOrderDetail(orderDetail);
-                return Ok(orderDetail);
+            orderDetail.ProductId = 1;
+            if (OrdersDAO.GetOrderById((int)orderDetail.OrderId) == null)
+            {
+                return NotFound();
+            }
+            if(ProductsDAO.GetProductById((int)orderDetail.ProductId) == null)
+            {
+                return NotFound();
+            }
+            OrderDetailsDAO.CreateOrderDetail(orderDetail);
+            return Ok(orderDetail);
         }
 
         [HttpGet]

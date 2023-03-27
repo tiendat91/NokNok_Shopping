@@ -10,6 +10,7 @@ namespace NokNok_ShoppingAPI.DAO
             {
                 using (var context = new NokNok_ShoppingContext())
                 {
+                    p.ProductId = 1;//Fix cứng sản phẩm đầu tiên
                     context.OrderDetails.Add(p);
                     context.SaveChanges();
                 }

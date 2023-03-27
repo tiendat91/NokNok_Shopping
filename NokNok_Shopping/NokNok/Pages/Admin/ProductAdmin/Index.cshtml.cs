@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using NokNok_ShoppingAPI.Models;
 
 namespace NokNok.Pages.Admin.ProductAdmin
 {
+    [Authorize(Roles = "1")]
     public class IndexModel : PageModel
     {
         private readonly HttpClient client = null;

@@ -1,8 +1,10 @@
-﻿@page
+﻿
+@page
 @model NokNok.Pages.CartModel
 @{
     decimal? amount = 0;
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!--breadcrumbs area start-->
 <div class="breadcrumbs_area other_bread">
@@ -53,9 +55,9 @@
                                                     $ @item.product.UnitPrice
                                                 </td>
                                                 <td class="product_quantity">
-                                                    <a  asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-action="1"> - </a>
-                                                    <a  asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-action="2"> + </a>
+                                                    <a asp-page="Cart" asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-Choice="Sub"> - </a>
                                                     <input type="text" value="@item.quantity" disabled />
+                                                    <a asp-page="Cart" asp-page-handler="UpdateNumber" asp-route-id="@item.product.ProductId" asp-route-Choice="Add"> + </a>
                                                 </td>
                                                 <td class="product_total">
                                                     @{
@@ -109,7 +111,7 @@
                                 </div>
                                  <form method="post">
                                     <div class="checkout_btn">
-                                        <button type="submit" >Proceed to Checkout</a>
+                                        <a asp-page-handler="Order" type="submit" onclick="this.form.submit()">Proceed to Checkout</a>
                                     </div>
                                 </form>
                             </div>

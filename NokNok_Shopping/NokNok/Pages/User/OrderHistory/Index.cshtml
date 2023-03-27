@@ -52,7 +52,14 @@
                             <div class="mb-3 d-flex justify-content-between">
                                 <div>
                                     <span class="me-3">@item.OrderDate</span>
-                                    <span class="badge rounded-pill bg-info">SHIPPING</span>
+                                    @if(item.ShippedDate == null)
+                                    {
+                                        <span class="badge rounded-pill bg-info">SHIPPING</span>
+                                    }else
+                                    
+                                    {
+                                        <span class="badge rounded-pill bg-info" >Finished</span>
+                                    }
                                 </div>
                                 <div class="d-flex">
                                     <a type="button" class="btn btn-success" href="~/User/OrderHistory/Invoice?orderId=@item.OrderId"><i class="bi bi-download"></i> <span class="text">Invoice</span></a>
