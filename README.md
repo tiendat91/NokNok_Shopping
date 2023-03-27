@@ -22,5 +22,6 @@ NokNok - Website mua bán thiết bị điện tử (ASP .NET CORE API/ C# .NET 
 
 ![history](https://user-images.githubusercontent.com/97070952/227845638-bd69837e-3974-4e08-9b94-a35f931793a7.PNG)
 
+## Cart Shop
 
-
+![Cart](https://user-images.githubusercontent.com/97070952/227847619-147fdaeb-9d3c-47aa-b3c7-5a7394f526ea.PNG)
