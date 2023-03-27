@@ -1,5 +1,5 @@
 # NokNok WEBSITE
-NokNok - Website mua bán thiết bị điện tử (ASP .NET CORE API - .NET 6)
+NokNok - Website mua bán thiết bị điện tử (ASP .NET CORE API/ C# .NET 6)
 
 ## Main Features
 
